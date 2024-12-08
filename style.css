@@ -34,7 +34,7 @@ body {
   height: 150px;
   width: 100%;
   position: fixed;
-  background-color: rgb(225, 23, 23);
+  background-color: #22212B;
   display: flex;
   gap: 40px;
   align-items: center;
