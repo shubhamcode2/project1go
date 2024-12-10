@@ -12,6 +12,7 @@ body {
   color: white;
   perspective: 800px;
 }
+
 #cursor {
   height: 20px;
   width: 20px;
@@ -20,6 +21,7 @@ body {
   position: fixed;
   z-index: 99;
 }
+
 #cursor-blur {
   height: 250px;
   width: 250px;
@@ -34,7 +36,7 @@ body {
   height: 150px;
   width: 100%;
   position: fixed;
-  background-color: #22212B;
+  background-color: #22212b;
   display: flex;
   gap: 40px;
   align-items: center;
@@ -42,9 +44,11 @@ body {
   padding: 0 100px;
   z-index: 99;
 }
+
 #nav img {
   height: 50px;
 }
+
 video {
   height: 100%;
   width: 100%;
@@ -52,10 +56,12 @@ video {
   position: fixed;
   z-index: 1;
 }
+
 #main {
   position: relative;
   background-color: #979895;
 }
+
 #page1 {
   height: 100vh;
   width: 100%;
@@ -67,11 +73,13 @@ video {
   text-align: center;
   z-index: 1;
 }
+
 #page1 h1 {
   font-size: 120px;
   font-weight: 900;
   position: relative;
 }
+
 #page1 h1::before {
   content: "EAT. DRINK. PLAY.";
   position: absolute;
@@ -81,12 +89,14 @@ video {
   -webkit-text-stroke: 1px rgb(173, 255, 47);
   z-index: 1;
 }
+
 #page1 h2 {
   font-size: 25px;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 #page1 p {
   font-size: 15px;
   font-weight: 500;
@@ -99,16 +109,17 @@ video {
 }
 
 #scroller {
-  /* background-color: rgba(255, 0, 0, 0); */
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
   z-index: 10;
 }
+
 #scroller::-webkit-scrollbar {
   display: none;
 }
+
 #scroller-in {
   display: inline-block;
   white-space: nowrap;
@@ -141,6 +152,7 @@ video {
     transform: translateX(-100%);
   }
 }
+
 #about-us {
   height: 50vh;
   width: 100%;
@@ -152,26 +164,31 @@ video {
   align-items: center;
   justify-content: space-around;
 }
+
 #about-us img {
   height: 180px;
   border-radius: 20px;
   width: 250px;
   object-fit: cover;
 }
+
 #about-us-in {
   text-align: center;
   width: 50%;
   row-gap: 10px;
 }
+
 #about-us-in h3 {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 #about-us-in p {
   font-size: 15px;
   line-height: 22px;
 }
+
 #card-container {
   background-color: rgba(255, 0, 0, 0);
   height: 60vh;
@@ -181,12 +198,11 @@ video {
   gap: 70px;
   justify-content: center;
 }
+
 .card {
   height: 85%;
   width: 20%;
   border-radius: 20px;
-  /* color: blue; */
-  /* background-color: blue; */
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -194,15 +210,19 @@ video {
   transition: all ease 0.6s;
   z-index: 10;
 }
+
 #card1 {
   background-image: url(/assets/66c18efe4287b026747e7f6816a42376.jpg);
 }
+
 #card2 {
   background-image: url(/assets/Golf-Ball-on-Tee2.jpg);
 }
+
 #card3 {
   background-image: url(/assets/1000_F_143835726_TeL0OdJ62VT0hCexeSru8RjI3BIKLvjf.jpg);
 }
+
 .overlay {
   height: 100%;
   width: 100%;
@@ -212,6 +232,7 @@ video {
   transition: all ease 0.6s;
   background-color: rgb(123, 255, 47);
 }
+
 .overlay h4 {
   font-size: 20px;
   text-transform: uppercase;
@@ -220,20 +241,23 @@ video {
   white-space: nowrap;
   margin-bottom: 20px;
 }
+
 .overlay p {
   font-size: 18px;
   color: black;
 }
+
 .card:hover .overlay {
   opacity: 1;
 }
+
 .card:hover {
   transform: rotate3d(8, 2, 0, 25deg);
 }
+
 #greendiv {
   background-color: rgb(70, 245, 31);
   height: 30vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,9 +268,57 @@ video {
   color: rgb(0, 0, 0);
   line-height: 40px;
   font-weight: 600;
-  /* text-shadow: 1px 1px; */
   text-align: center;
   width: 80%;
   align-items: center;
   text-transform: uppercase;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+  #nav {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    height: auto;
+    gap: 10px;
+  }
+
+  #page1 h1 {
+    font-size: 60px;
+  }
+
+  #page1 h2 {
+    font-size: 18px;
+  }
+
+  #page1 p {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  #about-us {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #about-us img {
+    height: 120px;
+    width: 200px;
+  }
+
+  #card-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+  }
+
+  #greendiv h3 {
+    font-size: 20px;
+  }
 }
